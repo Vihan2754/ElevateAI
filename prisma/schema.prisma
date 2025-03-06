@@ -1,0 +1,107 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String  @id @default(uuid())
+  clerkUserId String  @unique
+  email       String  @unique
+  name        String?
+  imageUrl    String?
+  industry    String?
+
+  industryInsight IndustryInsight? @relation(fields: [industry], references: [industry])
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  //Profile fields
+  bio        String?
+  experience Int? //years of experience
+  skills     String[] // Array of Skills   
+
+  assessmensts Assessment[]
+  resume       Resume?
+  coverLetter  CoverLetter[]
+}
+
+model Assessment {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  quizScore      Float //overall quiz score
+  questions      Json[] //array of {questions, answers,useranswer,isCorrect}
+  category       String //technical,behavioral
+  improvementTip String? // AI-generated improvement tip
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model Resume {
+  id        String   @id @default(cuid())
+  userId    String   @unique // one resume per user 
+  user      User     @relation(fields: [userId], references: [id])
+  content   String   @db.Text // Markdown content
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CoverLetter {
+  id             String   @id @default(cuid())
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id])
+  content        String // Markdown content
+  jobDescription String?
+  companyName    String
+  jobTitle       String
+  status       String 
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([userId])
+}
+
+model IndustryInsight {
+  id       String @id @default(cuid())
+  industry String @unique
+
+  //users in this industry
+  users User[]
+
+  salaryRanges Json[]
+
+  //industry trends
+  growthRate  Float
+  demandLevel DemandLevel //high , medium , low
+  topSkills   String[] //most in demand skills
+
+  // market conditions
+  marketOutlook MarketOutLook //positive, neutral , negative
+  keyTrends     String[]
+
+  // learning suggestions
+  recommendedSkills String[]
+
+  lastUpdated DateTime @default(now())
+  nextUpdate  DateTime
+
+  @@index([industry])
+}
+
+enum DemandLevel {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum MarketOutLook {
+  POSITIVE
+  NEUTRAL
+  NEGATIVE
+}
