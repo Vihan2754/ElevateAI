@@ -54,7 +54,7 @@ model Resume {
 
 model CoverLetter {
   id             String   @id @default(cuid())
-  userId         String   @unique
+  userId         String   
   user           User     @relation(fields: [userId], references: [id])
   content        String // Markdown content
   jobDescription String?
