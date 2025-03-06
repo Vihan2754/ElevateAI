@@ -18,13 +18,13 @@ const HeroSection = () => {
 
             if (scrollPosition > scrollThreshold) {
                 imageElement.classList.add("scrolled");
-            }else{
+            } else {
                 imageElement.classList.remove("scrolled");
             }
         };
 
         window.addEventListener("scroll", handleScroll);
-        return () =>  window.addEventListener("scroll", handleScroll);
+        return () => window.addEventListener("scroll", handleScroll);
     }, []);
 
     return (
@@ -32,9 +32,9 @@ const HeroSection = () => {
             <div className="space-y-6 text-center">
                 <div className="space-y-6 mx-auto">
                     <h1 className="text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl bg-gradient-title">
-                        Your AI Career Coach for
+                        Empowering Your Career
                         <br />
-                        Professional Success
+                        Journey with AI
                     </h1>
                     <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
                         Advance your career with personalized guidance, interview prep, and AI-powered tools for job success.
