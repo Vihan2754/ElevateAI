@@ -1,36 +1,65 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# HorizonAI-Success Through AI
+I have developed an AI-powered career advancement application designed to support you at every stage of your professional journey.
+Empower your career with intelligent tools designed for success 
+
+
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Deployment](#deployment)
+- [Getting Started](#getting-started)
+- [Feedback](#feedback)
+
+## Features
+- #### AI-Tailored Resumes – Generate personalized, job-specific resumes to make a lasting impression.
+- #### AI-Generated Cover Letters – Craft compelling cover letters that align with your target roles.
+- #### Interview Preparation – Practice with curated questions across various topics to enhance your confidence and readiness.
+- #### Industry Insights – Stay ahead with real-time job market trends, including in-demand roles across different industries.
+
+
+
+## Tech Stack
+
+**Frontend:** Next.js , React , Tailwindcss , Shadcn UI
+
+**Backend & Database:** NeonDb , Prisma , Node.js
+
+
+**AI & User Authentication:** Gemini API , Clerk
+
+
+## Deployment
+
+Deployed this project on vercel
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  https://horizon-ai-ten.vercel.app
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Open http://localhost:3000 with your browser to see the result.
 
-## Deploy on Vercel
+You can start editing the page by modifying app/page.js. The page auto-updates as you edit the file.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Feedback
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you have any feedback, please reach out to me at - pranjulmani010@gmail.com
+
+
