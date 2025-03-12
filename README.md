@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # HorizonAI-Success Through AI
 I have developed an AI-powered career advancement application designed to support you at every stage of your professional journey.
-Empower your career with intelligent tools designed for success 
+Empower your career with intelligent tools designed for success.
 
 
 ## Table of Contents
