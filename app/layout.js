@@ -10,6 +10,7 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  icons: "/ai.png",
   title: "HorizonAI - Success Through AI",
   description: "",
 };
@@ -17,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider appearance={{
-      baseTheme:dark,
+      baseTheme: dark,
     }}>
       <html lang="en" suppressHydrationWarning>
 
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
             {/* header */}
             <Header />
             <main className="min-h-screen">{children}</main>
-            <Toaster richColors/>
+            <Toaster richColors />
 
             {/* footer */}
             <footer className="bg-muted/50 py-12">
