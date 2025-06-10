@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   icons: "/ai.png",
-  title: "HorizonAI - Success Through AI",
+  title: "ElevateAI - Success Through AI",
   description: "",
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
             {/* footer */}
             <footer className="bg-muted/50 py-12">
               <div className="container mx-auto px-4 text-center text-gray-200">
-                <p>Made with 💗 by Pranjul</p>
+                <p>Made with 💗 by Vinay</p>
               </div>
             </footer>
           </ThemeProvider>
